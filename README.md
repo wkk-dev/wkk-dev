@@ -1,4 +1,5 @@
 - 🔭 主要使用: Java, Nodejs
+- 🤔 正在学习：Markdown
 - 🌱 博客：[WKK & Blog](https://blog.wkk-dev.top)
 - 📫 有事联系: [WKK & Mail](mailto:wkk@wkk-dev.top)
 
