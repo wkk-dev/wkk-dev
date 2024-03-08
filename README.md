@@ -6,6 +6,5 @@
 - 📫 有事联系: [WKK & Mail](mailto:wkk@wkk-dev.top)
 
 #### 我的Github数据
-| <img align="center" src="https://github-readme-stats.vercel.app/api?username=wkk-dev&show_icons=true&locale=cn&hide_border=true&theme=buefy" alt="WKK's Github Stats" /> | <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=wkk-dev&layout=compact&locale=cn&hide_border=true&theme=buefy" /> |
-| ------------- | ------------- |
-
+<img align="center" src="https://github-readme-stats.vercel.app/api?username=wkk-dev&show_icons=true&locale=cn&hide_border=true&theme=buefy" alt="WKK's Github Stats" />
+<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=wkk-dev&layout=compact&locale=cn&hide_border=true&theme=buefy" />
