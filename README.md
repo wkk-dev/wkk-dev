@@ -1,6 +1,5 @@
- **Hi！ I'm WKK**
+ **Hi！ I'm *** **
 > This is my profile
-- 我是一名学生
 - 🔭 主要使用: Nodejs
 - 🤔 正在学习：Markdown
 - 🌱 博客：[WKK & Blog](https://blog.wkk-dev.top)
