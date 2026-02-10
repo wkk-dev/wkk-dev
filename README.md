@@ -2,7 +2,7 @@
 > This is my profile
 - 🔭 主要使用: Nodejs
 - 🤔 正在学习：Markdown
-- 🌱 博客：[N/A]
+- 🌱 博客：Building...
 - 📫 有事联系: [WKK & Mail](mailto:wkk-dev@outlook.com)  
 - 📫 有事联系(备用): [WKK & Mail](mailto:wkk-dev@qq.com)  
 
