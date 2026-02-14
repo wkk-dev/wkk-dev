@@ -1,4 +1,4 @@
- ** "Hey Friends" **
+ ** Hello! **
 > This is my profile
 - 🔭 主要使用: Nodejs
 - 🤔 正在学习：Markdown
