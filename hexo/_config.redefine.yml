@@ -29,7 +29,7 @@ defaults:
   # Site logo
   logo: 
   # Site avatar
-  avatar: https://cdn.wkr-dev.top/file/blog/img/oaBRczOi.webp
+  avatar: https://img.wkr-dev.top/file/blog/img/oaBRczOi.webp
 # IMAGE CONFIGURATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -437,7 +437,7 @@ inject:
     -
   # Inject custom footer html code
   footer:
-    - https://cdn.wkr-dev.top/file/blog/css/eLurUTpo.css  #twikoo-css
+    - https://img.wkr-dev.top/file/blog/css/eLurUTpo.css  #twikoo-css
     -
 # INJECT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
