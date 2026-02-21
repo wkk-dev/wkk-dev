@@ -9,7 +9,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   <rights>All rights reserved 2026, John Doe</rights>
   <title>Hexo</title>
-  <updated>2026-02-21T10:04:34.750Z</updated>
+  <updated>2026-02-21T10:08:54.263Z</updated>
   <entry>
     <author>
       <name>John Doe</name>
@@ -19,11 +19,11 @@
     </content>
     <id>http://example.com/2026/02/21/hello-world/</id>
     <link href="http://example.com/2026/02/21/hello-world/"/>
-    <published>2026-02-21T10:04:34.750Z</published>
+    <published>2026-02-21T10:08:54.263Z</published>
     <summary>
       <![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for]]>
     </summary>
     <title>Hello World</title>
-    <updated>2026-02-21T10:04:34.750Z</updated>
+    <updated>2026-02-21T10:08:54.263Z</updated>
   </entry>
 </feed>
