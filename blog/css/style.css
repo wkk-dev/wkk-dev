@@ -426,7 +426,7 @@ img[lazyload] {
   clear: both;
 }
 .markdown-body {
-  font-family: 'Geist Variable', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif, sans-serif;
+  font-family: 'Geist Variable', 'Noto Sans SC', sans-serif;
   font-size: 16px;
 }
 .markdown-body blockquote:not(.not-markdown) {
@@ -552,7 +552,7 @@ img[lazyload] {
 .markdown-body .h4:not(.not-markdown),
 .markdown-body .h5:not(.not-markdown),
 .markdown-body .h6:not(.not-markdown) {
-  font-family: 'Geist Variable', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif, sans-serif;
+  font-family: 'Geist Variable', 'Noto Sans SC', sans-serif;
   color: var(--second-text-color);
   line-height: 1.5;
 }
@@ -2637,7 +2637,7 @@ html.is-animating .scroll-progress-bar {
   width: 100%;
   font-size: 0.92rem;
   box-sizing: border-box;
-  font-family: 'Geist Variable', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif, 'Noto Sans', 'Noto Sans SC', sans-serif;
+  font-family: 'Geist Variable', 'Noto Sans SC', 'Noto Sans', 'Noto Sans SC', sans-serif;
 }
 .post-toc-wrap .post-toc .toc-title {
   font-size: 0.8rem;
@@ -5208,19 +5208,6 @@ html.is-animating .transition-fade-down {
   overflow: hidden;
   transition: all 0.2s ease;
 }
-.home-content-container {
-  margin-right: 38px;
-}
-@media (max-width: 768px) {
-  .home-content-container {
-    margin-right: 0;
-  }
-}
-@media (max-width: 640px) {
-  .home-content-container {
-    margin-right: 0;
-  }
-}
 .home-content-container .seo-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -5287,7 +5274,7 @@ html.is-animating .transition-fade-down {
   font-size: 1.4rem;
   line-height: 1.5;
   color: var(--second-text-color);
-  font-family: 'Geist Variable', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Heiti SC', 'WenQuanYi Micro Hei', sans-serif, 'Noto Sans SC', sans-serif;
+  font-family: 'Geist Variable', 'Noto Sans SC', 'Noto Sans SC', sans-serif;
   margin: 0;
 }
 @media (max-width: 768px) {
@@ -5766,153 +5753,4 @@ html.is-animating .transition-fade-down {
   .tag-container .tag-name {
     font-size: 2.4rem;
   }
-}
-.home-sidebar-container {
-  width: 240px;
-  height: auto;
-  margin: 0 38px;
-}
-@media (max-width: 768px) {
-  .home-sidebar-container {
-    margin: 0 19px;
-  }
-}
-@media (max-width: 640px) {
-  .home-sidebar-container {
-    display: none;
-  }
-}
-.home-sidebar-container .sticky-container {
-  top: 70px;
-}
-.home-sidebar-container .sidebar-content {
-  padding: 20px;
-  border-radius: 18px;
-  box-sizing: border-box;
-  background: var(--background-color);
-  box-shadow: var(--redefine-box-shadow);
-}
-.home-sidebar-container .sidebar-content:hover {
-  box-shadow: var(--redefine-box-shadow-hover);
-}
-@media (max-width: 768px) {
-  .home-sidebar-container .sidebar-content {
-    padding: 16px;
-    border-radius: 18px;
-  }
-}
-@media (max-width: 640px) {
-  .home-sidebar-container .sidebar-content {
-    padding: 12px;
-    border-radius: 18px;
-  }
-}
-.home-sidebar-container .sidebar-content[marginTop] {
-  margin-top: 22.8px;
-}
-.home-sidebar-container .sidebar-content .avatar img {
-  width: 80px;
-  height: 80px;
-  border-radius: 18px;
-  box-shadow: var(--redefine-box-shadow-flat);
-  border: 1px solid var(--border-color);
-  padding: 1px;
-}
-.home-sidebar-container .sidebar-content .avatar img:hover {
-  box-shadow: var(--redefine-box-shadow);
-}
-.home-sidebar-container .sidebar-content .author .name {
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--second-text-color);
-}
-.home-sidebar-container .sidebar-content .author .label {
-  text-align: center;
-  font-size: 0.8rem;
-  color: var(--third-text-color);
-}
-.home-sidebar-container .sidebar-links {
-  overflow: hidden;
-  padding: 15px;
-  border-radius: 18px;
-  box-sizing: border-box;
-  background: var(--background-color);
-  box-shadow: var(--redefine-box-shadow);
-}
-.home-sidebar-container .sidebar-links:hover {
-  box-shadow: var(--redefine-box-shadow-hover);
-}
-@media (max-width: 768px) {
-  .home-sidebar-container .sidebar-links {
-    padding: 11px;
-    border-radius: 18px;
-  }
-}
-@media (max-width: 640px) {
-  .home-sidebar-container .sidebar-links {
-    padding: 7px;
-    border-radius: 18px;
-  }
-}
-.home-sidebar-container .sidebar-links[marginTop] {
-  margin-top: 22.8px;
-}
-.home-sidebar-container .sidebar-links .site-info {
-  background-color: var(--second-background-color);
-  margin: -15px -15px 10px -15px;
-  border-radius: 18px 18px 0px 0px;
-  padding: 15px;
-  border-bottom: 1px solid var(--border-color);
-}
-.home-sidebar-container .sidebar-links .site-info .site-name {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--second-text-color);
-  font-family: 'Chillax-Variable', sans-serif;
-  text-align: center;
-}
-.home-sidebar-container .sidebar-links .site-info .announcement {
-  font-size: 0.9rem;
-  color: var(--third-text-color);
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-.home-sidebar-container .sidebar-links .links {
-  padding: 5px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--second-text-color);
-  text-align: left;
-  border-radius: 9px;
-  cursor: pointer;
-  font-family: Geist Variable, Noto Sans SC, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
-}
-.home-sidebar-container .sidebar-links .links .link-name {
-  font-weight: 500;
-}
-.home-sidebar-container .sidebar-links .links .icon-space {
-  margin-right: 5px;
-}
-.home-sidebar-container .sidebar-links .links:hover {
-  color: var(--primary-color);
-  background-color: var(--second-background-color);
-}
-.home-sidebar-container .sidebar-links .links .icon {
-  font-size: 1.2rem;
-}
-.home-sidebar-container .sidebar-links .links .label {
-  font-size: 0.8rem;
-}
-.home-sidebar-container .sidebar-links .announcement-outside {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  padding: 5px 0;
-  color: var(--second-text-color);
-  text-align: center;
 }
