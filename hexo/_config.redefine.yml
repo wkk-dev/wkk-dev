@@ -436,9 +436,9 @@ inject:
     -
     -
   # Inject custom footer html code
-  footer: 
-    - 
-    - https://cdn.wkr-dev.top/file/blog/css/eLurUTpo.css  #twikoo-css
+  footer:
+    - <div style="https://cdn.wkr-dev.top/file/blog/css/eLurUTpo.css"></div>
+    -  
 # INJECT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
