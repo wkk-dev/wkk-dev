@@ -15,7 +15,7 @@ jobs:
     steps:
       # 1. 检出目标仓库代码
       - name: Checkout Target Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: wkk-dev/wkk-dev
           token: ${{ secrets.GITHUB_TOKEN }}
