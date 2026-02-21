@@ -1,0 +1,112 @@
+name: Deploy Hexo from /hexo to /blog
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'hexo/**' # 仅当 hexo 目录下的文件变动时触发，可选优化
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      # ==========================================
+      # 第一步：检出整个仓库 (wkk-dev/wkk-dev)
+      # ==========================================
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ==========================================
+      # 第二步：配置 Node.js (v24.13.1, 禁用缓存)
+      # ==========================================
+      - name: Setup Node.js
+        uses: actions/setup-node@v6.2.0
+        with:
+          node-version: '24.13.1'
+          # 未设置 cache 参数，明确禁用缓存
+
+      # ==========================================
+      # 第三步：进入 /hexo 目录并构建
+      # ==========================================
+      - name: Install & Build in /hexo
+        run: |
+          echo "Entering /hexo directory..."
+          cd hexo
+          
+          # 检查 hexo 目录是否存在 package.json
+          if [ ! -f "package.json" ]; then
+            echo "Error: package.json not found in /hexo directory!"
+            exit 1
+          fi
+          
+          echo "Installing dependencies (No Cache)..."
+          npm install --production
+          
+          echo "Installing Hexo CLI..."
+          npm install -g hexo-cli
+          
+          echo "Generating static files..."
+          hexo clean
+          hexo generate
+          
+          echo "Build complete. Files generated in hexo/public"
+          ls -la public
+
+      # ==========================================
+      # 第四步：同步文件到 /blog 目录
+      # ==========================================
+      - name: Sync Public to /blog Directory
+        run: |
+          echo "Preparing /blog directory..."
+          
+          # 1. 确保根目录下有 blog 文件夹
+          mkdir -p blog
+          
+          # 2. 清空 blog 文件夹旧内容
+          rm -rf blog/*
+          rm -rf blog/.[!.]*
+          
+          # 3. 将 hexo/public 的内容复制到 blog
+          cp -r hexo/public/* blog/
+          
+          # 处理隐藏文件
+          shopt -s dotglob nullglob
+          for file in hexo/public/.*; do
+            if [ -e "$file" ]; then
+               fname=$(basename "$file")
+               if [ "$fname" != "." ] && [ "$fname" != ".." ]; then
+                 cp -r "$file" blog/
+               fi
+            fi
+          done
+          
+          echo "Files synced to /blog"
+
+      # ==========================================
+      # 第五步：提交并推送到 main 分支
+      # ==========================================
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot"
+          
+          git add .
+          
+          # 检查是否有变更 (主要关注 blog 目录的变化)
+          if ! git diff --staged --quiet; then
+            echo "Changes detected. Committing..."
+            git commit -m "chore: auto-deploy blog from /hexo to /blog [skip ci]"
+            
+            echo "Pushing to main branch..."
+            git push origin HEAD:main
+          else
+            echo "No changes detected. Skipping commit."
+          fi
