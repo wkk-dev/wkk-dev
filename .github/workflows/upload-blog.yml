@@ -1,105 +1,53 @@
-name: Sync Blog Content to /blog
+name: Sync Blog
 
 on:
-  workflow_dispatch: # 允许手动运行
-  # schedule:
-  #   - cron: '0 0 * * *' # 可选：每天凌晨自动运行
+  workflow_dispatch:
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # 必须拥有写入权限
+      contents: write
 
     steps:
-      # 1. 检出目标仓库代码 (已更新至 v6)
       - name: Checkout Target Repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v6.0.2
         with:
           repository: wkk-dev/wkk-dev
           token: ${{ secrets.GITHUB_TOKEN }}
           path: target-repo
-          # 如果目标仓库主分支是 master，请取消下面这行的注释并修改
-          # ref: master 
 
-      # 2. 下载压缩文件
-      - name: Download Compressed File
+      - name: Download and Extract
         run: |
           cd target-repo
-          echo "Downloading file..."
           curl -L -o content.gz "https://img.wkr-dev.top/file/blog/IvGRyNIT.gz"
-          
-          if [ ! -s content.gz ]; then
-            echo "Error: Download failed or file is empty."
-            exit 1
-          fi
-          echo "Download successful."
-
-      # 3. 解压并移动到 /blog 目录
-      - name: Extract and Move to /blog
-        run: |
-          cd target-repo
-          
-          # 创建 /blog 目录 (如果不存在)
-          mkdir -p blog
-          
-          # 创建一个临时目录用于解压，避免污染根目录
           mkdir -p temp_extract
           mv content.gz temp_extract/
           cd temp_extract
-          
-          echo "Extracting content..."
-          # 尝试解压 .gz 文件
           if gzip -t content.gz 2>/dev/null; then
             gunzip -k content.gz
             rm content.gz
-            
-            # 检查解压出来的文件是否是 tar 包 (处理 .tar.gz 情况)
             extracted_file=$(ls | head -n 1)
             if [ -n "$extracted_file" ] && file "$extracted_file" | grep -q "POSIX tar"; then
               tar -xf "$extracted_file"
               rm "$extracted_file"
             fi
           else
-            # 尝试直接作为 tar.gz 解压
             tar -xzf content.gz
             rm content.gz
           fi
-          
-          # 将解压出的所有内容移动到 ../blog 目录
-          # shopt -s dotglob 确保隐藏文件也被移动
           shopt -s dotglob
-          # 防止 mv 报错当目录为空时
-          ls -A | xargs -I {} mv {} ../blog/ || true
-          
-          # 返回主目录并清理临时文件夹
+          ls -A | xargs -I {} mv {} ../ || true
           cd ..
           rm -rf temp_extract
-          
-          echo "Content moved to /blog directory."
-          ls -la blog/
 
-      # 4. 配置 Git 用户
-      - name: Configure Git
+      - name: Commit and Push
         run: |
           cd target-repo
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-
-      # 5. 提交并推送
-      - name: Commit and Push
-        run: |
-          cd target-repo
-          
           git add .
-          
-          if git diff --staged --quiet; then
-            echo "No changes to commit."
-            exit 0
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: update root content [skip ci]"
+            git push origin HEAD:main
           fi
-          
-          git commit -m "chore: update blog content in /blog [skip ci]"
-          
-          # ⚠️ 重要：请确认目标仓库的主分支名是 main 还是 master
-          # 如果是 master，请将下面的 main 改为 master
-          git push origin HEAD:main
