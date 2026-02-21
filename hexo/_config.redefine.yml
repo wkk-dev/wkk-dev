@@ -29,7 +29,7 @@ defaults:
   # Site logo
   logo: 
   # Site avatar
-  avatar: https://img.wkr-dev.top/file/blog/UADM764t.webp
+  avatar: https://img.wkr-dev.top/file/blog/img/oaBRczOi.webp
 # IMAGE CONFIGURATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -354,7 +354,7 @@ comment:
   # Whether to enable comment
   enable: true
   # Comment system
-  system: waline # waline, gitalk, twikoo, giscus, utterances, artalk
+  system: twikoo # waline, gitalk, twikoo, giscus, utterances, artalk
   # System configuration
   config:
     # Waline comment system. See https://waline.js.org/
@@ -374,7 +374,7 @@ comment:
       proxy: # GitHub repository proxy
     # Twikoo comment system. See https://twikoo.js.org/
     twikoo:
-      version: 1.6.10 # Twikoo version, do not modify if you dont know what it is
+      version: 1.6.44 # Twikoo version, do not modify if you dont know what it is
       server_url: # Twikoo server URL. e.g. https://example.example.com
       region: # Twikoo region. can be empty
     # Giscus comment system. See https://giscus.app/
@@ -437,7 +437,7 @@ inject:
     -
   # Inject custom footer html code
   footer:
-    -
+    - https://img.wkr-dev.top/file/blog/css/eLurUTpo.css  #twikoo-css
     -
 # INJECT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
