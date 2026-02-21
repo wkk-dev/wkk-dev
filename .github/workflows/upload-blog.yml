@@ -1,4 +1,4 @@
-name: Sync Blog Content
+name: Upload Blog
 
 on:
   # 触发条件：可以手动运行，也可以设置为定时任务 (例如每天凌晨)
