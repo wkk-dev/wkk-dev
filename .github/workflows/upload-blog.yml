@@ -20,7 +20,7 @@ jobs:
       - name: Download and Extract
         run: |
           cd target-repo
-          curl -L -o content.gz "https://img.wkr-dev.top/file/blog/IvGRyNIT.gz"
+          curl -L -o content.gz "https://img.wkr-dev.top/file/blog/5KNnB1Nd.gz"
           mkdir -p temp_extract
           mv content.gz temp_extract/
           cd temp_extract
