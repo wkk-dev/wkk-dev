@@ -436,9 +436,9 @@ inject:
     -
     -
   # Inject custom footer html code
-  footer:
+  footer: 
+    - <a href="https://icp.gov.moe/?keyword=20260203" target="_blank">萌ICP备20260203号</a>
     - https://cdn.wkr-dev.top/file/blog/css/eLurUTpo.css  #twikoo-css
-    -
 # INJECT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
