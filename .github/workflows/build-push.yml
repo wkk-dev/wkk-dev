@@ -33,22 +33,15 @@ jobs:
           # 禁用缓存
 
       # ==========================================
-      # 第三步：【修复点】进入 /hexo 目录并构建
+      # 第三步：进入 /hexo 目录并构建
       # ==========================================
       - name: Install & Build in /hexo
         run: |
-          echo "Current directory before cd: $(pwd)"
           echo "Entering /hexo directory..."
-          
-          # 【关键修复】切换到 hexo 子目录
           cd hexo
           
-          echo "Current directory after cd: $(pwd)"
-          
-          # 再次确认 package.json 是否存在，方便调试
           if [ ! -f "package.json" ]; then
-            echo "::error::package.json not found in /hexo directory! Please check your folder structure."
-            ls -la
+            echo "::error::package.json not found in /hexo directory!"
             exit 1
           fi
           
@@ -62,39 +55,47 @@ jobs:
           hexo clean
           hexo generate
           
-          echo "Build complete. Files generated in hexo/public"
-          # 确认 public 目录生成成功
-          ls -la public
+          echo "Build complete."
 
       # ==========================================
-      # 第四步：同步文件到 /blog 目录
+      # 第四步：【关键修改】彻底清空 /blog 并同步新文件
       # ==========================================
-      - name: Sync Public to /blog Directory
+      - name: Clean and Sync to /blog
         run: |
-          echo "Preparing /blog directory..."
+          echo "=== Starting Clean and Sync Process ==="
           
-          # 确保根目录下有 blog 文件夹
+          # 1. 确保 blog 目录存在
           mkdir -p blog
           
-          # 清空 blog 文件夹旧内容
-          rm -rf blog/*
-          rm -rf blog/.[!.]*
+          # 2. 【核心步骤】彻底清空 blog 目录内容
+          echo "Clearing all files in /blog (including hidden files)..."
           
-          # 【注意】此时我们在根目录，所以源路径是 hexo/public
+          # 方法 A: 使用 find 命令删除目录内所有文件 (最稳妥，不会误删目录本身)
+          # -mindepth 1 表示不删除 blog 目录本身，只删里面的内容
+          # -delete 直接删除
+          find blog -mindepth 1 -delete
+          
+          # 验证是否清空
+          echo "Files remaining in /blog after clean:"
+          ls -la blog || echo "(Directory is empty)"
+          
+          # 3. 复制新文件
+          echo "Copying new files from hexo/public to blog..."
           cp -r hexo/public/* blog/
           
-          # 处理隐藏文件
+          # 4. 单独处理隐藏文件 (cp -r 有时不会复制以 . 开头的隐藏文件)
           shopt -s dotglob nullglob
           for file in hexo/public/.*; do
             if [ -e "$file" ]; then
                fname=$(basename "$file")
+               # 排除当前目录和上级目录引用
                if [ "$fname" != "." ] && [ "$fname" != ".." ]; then
                  cp -r "$file" blog/
                fi
             fi
           done
           
-          echo "Files synced to /blog"
+          echo "Sync complete. New files in /blog:"
           ls -la blog
 
       # ==========================================
@@ -107,12 +108,14 @@ jobs:
           
           git add .
           
+          # 检查是否有变更
           if ! git diff --staged --quiet; then
             echo "Changes detected. Committing..."
-            git commit -m "chore: auto-deploy blog from /hexo to /blog [skip ci]"
+            # 提交信息表明进行了清理和重新部署
+            git commit -m "chore: clean and redeploy blog from /hexo to /blog [skip ci]"
             
             echo "Pushing to main branch..."
             git push origin HEAD:main
           else
-            echo "No changes detected. Skipping commit."
+            echo "No changes detected (unlikely if files were cleaned and regenerated). Skipping commit."
           fi
