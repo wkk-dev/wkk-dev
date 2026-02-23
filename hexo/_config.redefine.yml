@@ -216,11 +216,11 @@ navbar:
     # Status: 
     #   path: https://status.ohevan.com/
     #   icon: fa-regular fa-chart-bar
-     About: 
-       icon: fa-regular fa-user
-       submenus:
-         Me: /about
-         Github: https://github.com/EvanNotFound/hexo-theme-redefine
+    About: 
+      icon: fa-regular fa-user
+      submenus:
+        Me: /about
+        Github: https://github.com/EvanNotFound/hexo-theme-redefine
     #     Blog: https://ohevan.com
     #     Friends: /friends
     # Links: 
