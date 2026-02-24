@@ -75,7 +75,7 @@ global:
     scale: true # 缩放效果
   # 滚动进度
   scroll_progress:
-    bar: false # 进度条
+    bar: true # 进度条
     percentage: true # 百分比
   # 网站计数器
   website_counter:
@@ -89,7 +89,7 @@ global:
   # 是否启用预加载器。
   preloader:
     enable: true
-    custom_message: # 自定义消息。如果为空，将显示网站标题
+    custom_message: Loading... # 自定义消息。如果为空，将显示网站标题
   # 侧边工具设置
   side_tools:
     # 是否启用设置按钮的齿轮旋转动画
@@ -210,12 +210,12 @@ navbar:
     Home: 
       path: / 
       icon: fa-regular fa-house # 可以为空
-    # Archives: 
-    #   path: /archives 
-    #   icon: fa-regular fa-archive # 可以为空
-    # Status: 
-    #   path: https://status.ohevan.com/
-    #   icon: fa-regular fa-chart-bar
+    Archives: 
+      path: /archives 
+      icon: fa-regular fa-archive # 可以为空
+    Status: 
+      path: https://status.ohevan.com/
+      icon: fa-regular fa-chart-bar
     About: 
       icon: fa-regular fa-user
       submenus:
