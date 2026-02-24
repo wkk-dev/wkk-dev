@@ -72,7 +72,7 @@ global:
   # 鼠标悬停效果
   hover:
     shadow: true # 阴影效果
-    scale: false # 缩放效果
+    scale: true # 缩放效果
   # 滚动进度
   scroll_progress:
     bar: false # 进度条
@@ -88,7 +88,7 @@ global:
   single_page: true
   # 是否启用预加载器。
   preloader:
-    enable: false
+    enable: true
     custom_message: # 自定义消息。如果为空，将显示网站标题
   # 侧边工具设置
   side_tools:
