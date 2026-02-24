@@ -15,7 +15,7 @@ info:
   # 网站副标题
   subtitle: Everyone is born unique.
   # 作者名称
-  author: Wkr
+  author: wkr
   # 网站 URL
   url: https://blog.wkr-dev.top
 # 基本信息 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 结束
@@ -253,12 +253,12 @@ home:
        Archives: 
          path: /archives 
          icon: fa-regular fa-archive # 可以为空
-       Tags: 
-         path: /tags 
-         icon: fa-regular fa-tags # 可以为空
-       Categories: 
-         path: /categories 
-         icon: fa-regular fa-folder # 可以为空
+#      Tags: 
+#        path: /tags 
+#        icon: fa-regular fa-tags # 可以为空
+#      Categories: 
+#        path: /categories 
+#        icon: fa-regular fa-folder # 可以为空
       # ...... # 你可以添加更多
   # 文章日期格式
   article_date_format: auto # auto, relative, YYYY-MM-DD, YYYY-MM-DD HH:mm:ss 等。
