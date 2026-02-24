@@ -359,7 +359,7 @@ comment:
   config:
     # Waline 评论系统。参见 https://waline.js.org/
     waline:
-      serverUrl: https://example.example.com # Waline 服务器 URL，例如 https://example.example.com
+      serverUrl: https://waline.api.wkr-dev.top # Waline 服务器 URL，例如 https://example.example.com
       lang: zh-CN # Waline 语言，例如 zh-CN, en-US。参见 https://waline.js.org/guide/client/i18n.html
       emoji: [] # Waline 表情，参见 https://waline.js.org/guide/features/emoji.html
       recaptchaV3Key: # Google reCAPTCHA v3 密钥。参见 https://waline.js.org/reference/client/props.html#recaptchav3key
