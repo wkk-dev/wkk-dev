@@ -374,7 +374,7 @@ comment:
       proxy: # GitHub 仓库代理
     # Twikoo 评论系统。参见 https://twikoo.js.org/
     twikoo:
-      version: 1.6.44 # Twikoo 版本，如果不了解请不要修改
+      version: 1.6.45 # Twikoo 版本，如果不了解请不要修改
       server_url: https://twikoo.api.wkr-dev.top/.netlify/functions/twikoo # Twikoo 服务器 URL，例如 https://example.example.com
       region: # Twikoo 区域，可以为空
     # Giscus 评论系统。参见 https://giscus.app/
