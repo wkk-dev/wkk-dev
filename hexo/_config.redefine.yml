@@ -438,7 +438,7 @@ inject:
   # 注入自定义 footer HTML 代码
   footer:
     - <div style="https://img.wkr-dev.top/file/blog/css/eLurUTpo.css"></div>
-    - https://s4.zstatic.net/npm/twikoo@1.7.7/dist/twikoo.min.js 
+    - <script src="https://s4.zstatic.net/npm/twikoo@1.7.7/dist/twikoo.min.js"></script> 
 # 注入 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 结束
 
 
