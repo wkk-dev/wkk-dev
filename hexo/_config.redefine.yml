@@ -494,7 +494,7 @@ cdn:
   # 是否启用 CDN
   enable: false
   # CDN 提供商
-  provider: npmmirror # npmmirror, zstatic, cdnjs, jsdelivr, unpkg, custom
+  provider: cdnjs # npmmirror, zstatic, cdnjs, jsdelivr, unpkg, custom
   # 自定义 CDN URL
   # 格式示例：https://cdn.custom.com/hexo-theme-redefine/${version}/source/${path}
   # ${path} 必须指向主题 "source" 文件夹的根目录
