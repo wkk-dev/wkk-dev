@@ -30,7 +30,7 @@ jobs:
         uses: actions/setup-node@v6.2.0
         with:
           node-version: '24.15.0'
-          #
+          cache:'npm’ # npm 依赖缓存
 
       # ==========================================
       # 第三步：进入 /hexo 目录并构建
