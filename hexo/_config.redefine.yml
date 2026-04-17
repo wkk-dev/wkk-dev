@@ -116,7 +116,7 @@ fontawesome: # Pro v6.2.1
   # 轻盈版本
   light: false
   # 双色调版本
-  duotone: false
+  duotone: true
   # Sharp Solid 版本
   sharp_solid: true
 # FONTAWESOME <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 结束
@@ -413,14 +413,14 @@ footer:
   # 页脚图标，在此处填写 fontawesome 图标代码
   icon: '<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>'
   # 网站开始时间，格式：YYYY/MM/DD HH:mm:ss
-  start: 2024/11/15 11:00:00
+  start: 2026/01/01 06:00:00
   # 站点统计
   statistics: true # 是否显示站点统计（总文章数、总字数）
   # 页脚自定义信息
   customize:
   # ICP 备案号。参见 https://beian.miit.gov.cn/
   icp:
-    enable: true # 是否启用
+    enable: false # 是否启用
     number: 萌ICP备20260203号 # ICP 备案号
     url: https://icp.gov.moe/?keyword=20260203 # ICP 备案链接
 # 页脚 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 结束
