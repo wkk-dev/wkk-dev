@@ -24,13 +24,13 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # ==========================================
-      # 第二步：配置 Node.js (v24.13.1, 禁用缓存)
+      # 第二步：配置 Node.js 24 (v24.15.0)
       # ==========================================
       - name: Setup Node.js
         uses: actions/setup-node@v6.2.0
         with:
-          node-version: '24.13.1'
-          # 禁用缓存
+          node-version: '24.15.0'
+          #
 
       # ==========================================
       # 第三步：进入 /hexo 目录并构建
@@ -67,11 +67,11 @@ jobs:
           # 1. 确保 blog 目录存在
           mkdir -p blog
           
-          # 2. 【核心步骤】彻底清空 blog 目录内容
+          # 2. 清空 blog 目录内容
           echo "Clearing all files in /blog (including hidden files)..."
           
-          # 方法 A: 使用 find 命令删除目录内所有文件 (最稳妥，不会误删目录本身)
-          # -mindepth 1 表示不删除 blog 目录本身，只删里面的内容
+          # 使用 find 命令删除目录内所有文件
+          # -mindepth 1 表示不删除 /blog
           # -delete 直接删除
           find blog -mindepth 1 -delete
           
