@@ -10,7 +10,7 @@
   <rights>All rights reserved 2026, wkr</rights>
   <subtitle>Everyone is born unique.</subtitle>
   <title>Kwang's Blog</title>
-  <updated>2026-03-20T09:08:36.913Z</updated>
+  <updated>2026-04-17T07:27:31.574Z</updated>
   <entry>
     <author>
       <name>wkr</name>
@@ -18,15 +18,15 @@
     <content>
       <![CDATA[<p>** MarkDown测试 **<br>图片引用测试<br><img                       lazyload                     src="/images/loading.svg"                     data-src="https://img.wkr-dev.top/file/blog/css/7sQSmvhU.webp"                      alt="静态图"                ><br><img                       lazyload                     src="/images/loading.svg"                     data-src="https://img.wkr-dev.top/file/blog/css/vRLYocNj.gif"                      alt="GIF动图"                ></p>]]>
     </content>
-    <id>https://blog.wkr-dev.top/2026/03/20/test/</id>
-    <link href="https://blog.wkr-dev.top/2026/03/20/test/"/>
-    <published>2026-03-20T09:08:36.913Z</published>
+    <id>https://blog.wkr-dev.top/2026/04/17/test/</id>
+    <link href="https://blog.wkr-dev.top/2026/04/17/test/"/>
+    <published>2026-04-17T07:27:31.574Z</published>
     <summary>
       <![CDATA[<p>** MarkDown测试 **<br>图片引用测试<br><img  
                      lazyload
                      src="/images/loading.svg"
                      da]]>
     </summary>
-    <updated>2026-03-20T09:08:36.913Z</updated>
+    <updated>2026-04-17T07:27:31.574Z</updated>
   </entry>
 </feed>
