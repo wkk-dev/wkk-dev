@@ -131,7 +131,7 @@ home_banner:
   style: fixed # static 或 fixed
   # 首页横幅图片
   image: 
-    light: https://cdn.wkr-dev.top/file/blog/b5b25d1e97efffc5cb315875aa8abeda(1).webp ##https://cdn.wkr-dev.top/file/blog/a690fbf319ecf2ef02a1ddeabbfce9f4.webp # 浅色模式
+    light: https://cdn.wkr-dev.top/file/blog/a690fbf319ecf2ef02a1ddeabbfce9f4.webp # 浅色模式
     dark: /images/wallhaven-wqery6-dark.webp # 深色模式
   # 首页横幅标题
   title: Everyone is born unique.
