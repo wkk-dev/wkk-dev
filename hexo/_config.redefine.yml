@@ -179,15 +179,15 @@ home_banner:
       - icon: github # 也可以是 "fa-brands fa-github"
         url: https://github.com/wkk-dev
       - icon: email
-        url: wkk-dev@qq.com
+        url: me@wkr-dev.com
       - icon: /images/custom-icon.svg
         url:
     # 带有二维码抽屉的社交链接
-    qrs:
-      - icon: weixin
-        qr:
-      - icon: /images/custom-icon.svg
-        qr:
+    #qrs:
+    #  - icon: weixin
+    #    qr:
+    #  - icon: /images/custom-icon.svg
+    #    qr:
 # 首页横幅 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 结束
 
 
