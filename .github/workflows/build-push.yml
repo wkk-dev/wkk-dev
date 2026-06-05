@@ -39,6 +39,7 @@ jobs:
         run: |
           echo "Entering /hexo directory..."
           cd hexo
+          npm install hexo-theme-redefine@latest
           
           if [ ! -f "package.json" ]; then
             echo "::error::package.json not found in /hexo directory!"
