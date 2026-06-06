@@ -10,26 +10,7 @@
   <rights>All rights reserved 2026, wkr</rights>
   <subtitle>Everyone is born unique.</subtitle>
   <title>Kwang's Blog</title>
-  <updated>2026-06-06T17:03:06.919Z</updated>
-  <entry>
-    <author>
-      <name>wkr</name>
-    </author>
-    <content>
-      <![CDATA[<p>** MarkDown测试 **<br>图片引用测试<br><img                       lazyload                     src="/images/loading.svg"                     data-src="https://img.wkr-dev.top/file/pixiv/1779602443148_0c1a2d1945b9d5b887ccdb8f6e384cd2.webp"                      alt="[静态图]([https:&#x2F;&#x2F;img.wkr-dev.top&#x2F;file&#x2F;blog&#x2F;css&#x2F;7sQSmvhU.webp](https:&#x2F;&#x2F;img.wkr-dev.top&#x2F;file&#x2F;pixiv&#x2F;1779602443148_0c1a2d1945b9d5b887ccdb8f6e384cd2.webp))"                ><br><img                       lazyload                     src="/images/loading.svg"                     data-src="https://img.wkr-dev.top/file/pixiv/1779602443938_ea1bf0d37ed049e5c3ded61e5dccef4c.webp"                                     ><br><img                       lazyload                     src="/images/loading.svg"                     data-src="https://img.wkr-dev.top/file/blog/css/vRLYocNj.gif"                      alt="GIF动图"                ></p>]]>
-    </content>
-    <id>https://blog.wkr-dev.top/1969/12/31/test/</id>
-    <link href="https://blog.wkr-dev.top/1969/12/31/test/"/>
-    <published>1969-12-31T16:00:02.026Z</published>
-    <summary>
-      <![CDATA[<p>** MarkDown测试 **<br>图片引用测试<br><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     da]]>
-    </summary>
-    <title>测试测试</title>
-    <updated>2026-06-06T17:03:06.919Z</updated>
-  </entry>
+  <updated>2026-06-06T17:05:09.370Z</updated>
   <entry>
     <author>
       <name>wkr</name>
@@ -49,6 +30,25 @@
 <p><img]]>
     </summary>
     <title>测试测试</title>
-    <updated>2026-06-06T17:03:06.919Z</updated>
+    <updated>2026-06-06T17:05:09.370Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>wkr</name>
+    </author>
+    <content>
+      <![CDATA[<p>** MarkDown测试 **<br>图片引用测试<br><img                       lazyload                     src="/images/loading.svg"                     data-src="https://img.wkr-dev.top/file/pixiv/1779602443148_0c1a2d1945b9d5b887ccdb8f6e384cd2.webp"                      alt="[静态图]([https:&#x2F;&#x2F;img.wkr-dev.top&#x2F;file&#x2F;blog&#x2F;css&#x2F;7sQSmvhU.webp](https:&#x2F;&#x2F;img.wkr-dev.top&#x2F;file&#x2F;pixiv&#x2F;1779602443148_0c1a2d1945b9d5b887ccdb8f6e384cd2.webp))"                ><br><img                       lazyload                     src="/images/loading.svg"                     data-src="https://img.wkr-dev.top/file/pixiv/1779602443938_ea1bf0d37ed049e5c3ded61e5dccef4c.webp"                                     ><br><img                       lazyload                     src="/images/loading.svg"                     data-src="/"                      alt="GIF动图"                ></p>]]>
+    </content>
+    <id>https://blog.wkr-dev.top/1969/12/31/test/</id>
+    <link href="https://blog.wkr-dev.top/1969/12/31/test/"/>
+    <published>1969-12-31T16:00:02.026Z</published>
+    <summary>
+      <![CDATA[<p>** MarkDown测试 **<br>图片引用测试<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     da]]>
+    </summary>
+    <title>测试测试</title>
+    <updated>2026-06-06T17:05:09.370Z</updated>
   </entry>
 </feed>
